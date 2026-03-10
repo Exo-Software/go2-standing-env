@@ -1,0 +1,24 @@
+[package]
+
+# Semantic Versioning is used: https://semver.org/
+version = "0.1.0"
+
+# Description
+category = "isaaclab"
+readme  = "README.md"
+
+title = "Go2 Standing Policy"
+author = "Isaac Lab Project Developers"
+maintainer = "Isaac Lab Project Developers"
+description="Go2 quadruped standing balance policy for Isaac Lab"
+repository = "https://github.com/isaac-sim/IsaacLab.git"
+keywords = ["extension", "go2", "standing", "isaaclab"]
+
+[dependencies]
+"isaaclab" = {}
+"isaaclab_assets" = {}
+"isaaclab_rl" = {}
+"isaaclab_tasks" = {}
+
+[[python.module]]
+name = "go2_standing"
