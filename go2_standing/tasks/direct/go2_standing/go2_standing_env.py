@@ -389,7 +389,7 @@ class Go2StandingEnv(DirectRLEnv):
                     self.cfg.mass_offset_range[0], self.cfg.mass_offset_range[1]
                 )
                 masses[env_ids, 0] = self._default_base_mass + mass_offsets
-                self.robot.root_physx_view.set_masses(masses, env_ids)
+                self.robot.root_physx_view.set_masses(masses, env_ids.cpu())
             except Exception:
                 pass  # PhysX mass API not available in this version
 
