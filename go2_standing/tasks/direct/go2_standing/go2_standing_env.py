@@ -27,7 +27,7 @@ class Go2StandingEnv(DirectRLEnv):
         super().__init__(cfg, render_mode, **kwargs)
 
         # Find joint indices for the controlled joints
-        self._leg_joint_ids, _ = self.robot.find_joints(self.cfg.leg_joint_names)
+        self._leg_joint_ids, _ = self.robot.find_joints(self.cfg.leg_joint_names, preserve_order=True)
 
         # Foot body indices (for reference)
         self._foot_body_ids, _ = self.robot.find_bodies(self.cfg.foot_body_names)
